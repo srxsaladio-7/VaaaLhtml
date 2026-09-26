@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub Preview Demo</title>
+    <style>
+        body {
+            font-family: system-ui, -apple-system, sans-serif;
+            background: #f4f7f6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .card {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            text-align: center;
+            max-width: 400px;
+        }
+        h1 { color: #333; }
+        p { color: #666; line-height: 1.5; }
+        button {
+            background: #238636;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 6px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        button:hover { background: #2ea043; }
+        #message { margin-top: 15px; font-weight: bold; color: #238636; }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <h1>🎉 Success!</h1>
+        <p>If you can see this styled card, your HTML file is rendering perfectly on GitHub!</p>
+        <button id="clickBtn">Click Me</button>
+        <div id="message"></div>
+    </div>
+
+    <script>
+        document.getElementById('clickBtn').addEventListener('click', () => {
+            document.getElementById('message').innerText = "🚀 JavaScript is working too!";
+        });
+    </script>
+</body>
+</html>
